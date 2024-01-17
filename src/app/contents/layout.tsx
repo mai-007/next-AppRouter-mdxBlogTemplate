@@ -15,9 +15,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           rel="stylesheet"
         />
         <AppHeader />
-        <header className="text-white p-9 transition bg-black">
-          <h1 className="font-bold">{Metadata.title}</h1>
-          <p>{Metadata.description}</p>
+        <header className="text-white p-9 bg-black">
+          <h1 className="font-bold ">{Metadata.title}</h1>
+          <p className="tracking-in-expand">{Metadata.description}</p>
         </header>
         <main className="flex justify-around py-14">
           <article className="max-w-2xl prose prose-xl">{children}</article>

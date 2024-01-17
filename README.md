@@ -1,5 +1,72 @@
-pmpm dev
+# Next.js(AppRouter)+MDX
+Next.jsにてAppRouterを使用しMDXでページ作成出来るtemplateです。
 
+## styling
+  TailwindCSS
+
+## QuickStart
+First, run the development server:
+
+```bash
+pnpm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+## 出来ること
+- MDXでのページ作成(JSX/カスタムComponent利用可)
+  @next/mdx @mdx-js/loader @mdx-js/react @types/mdx
+
+- GitHub Flavored Markdown(GFM)をサポート
+  remark-gfm
+  プレビューファイル：src/app/contents/article04
+
+- 数式の利用/表示
+　remark-math rehype-katex
+　TeXのデザインを適用するため<Link>の追加を行なっている。
+　src/app/contents/layout.tsx
+　プレビューファイル：src/app/contents/article05
+
+- コードブロックのシンタックスハイライト
+  @mapbox/rehype-prism
+  src/app/contents/layout.tsxにてCDN読み込み
+  プレビューファイル：src/app/contents/article06/page.mdx
+　
+- 目次の追加
+　rehype-slug remark-toc
+　プレビューファイル：src/app/contents/article07/page.mdx
+
+- MDXに改行を追加
+　remark-breaks
+  プレビューファイル：src/app/contents/article08/page.mdx
+
+
+## 注意点
+Rust ベースの MDX コンパイラーは使わない設定にしています。
+(GFMがエラーとなる)
+
+## theme
+tailwind.configに記述する
+
+## MDXのテンプレート作成
+### MDXページ全体のLayout(header/footerなど)
+src/contents/layoutに記述する
+
+### 記事のテンプレート
+mdx-components.tsxの以下に記載
+```
+export function useMDXComponents(components: MDXComponents): MDXComponents {
+  return {
+    h1: ({ children }) => <h1 style={{ fontSize: "100px" }}>{children}</h1>,
+    ...components,
+  };
+```
+
+--
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

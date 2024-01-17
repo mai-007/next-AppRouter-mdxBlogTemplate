@@ -1,3 +1,5 @@
+import Header from '@/components/Header'
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
@@ -11,7 +13,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/themes/prism-tomorrow.min.css"
         rel="stylesheet"
       />
-      <article className="prose prose-xl">{children}</article>
+      <Header />
+      <main className="flex justify-around py-14">
+      <article className="max-w-2xl prose prose-xl">{children}</article>
+      </main>
     </>
   );
 }

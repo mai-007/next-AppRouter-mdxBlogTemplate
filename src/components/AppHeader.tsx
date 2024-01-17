@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link'
 
-const Header:React.FC = () =>{
+const AppHeader:React.FC = () =>{
   return (
     <header className="p-4 pz-8 shadow">
       <Link href='/' legacyBehavior>
@@ -11,4 +11,4 @@ const Header:React.FC = () =>{
   );
 };
 
-export default Header;
+export default AppHeader;

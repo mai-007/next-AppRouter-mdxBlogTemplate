@@ -1,4 +1,5 @@
 import AppHeader from '@/components/AppHeader';
+import { Metadata } from "./article01/page.mdx"
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -14,8 +15,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           rel="stylesheet"
         />
         <AppHeader />
-        <header className="text-white p-9">
-          <h1 className="font-bold"></h1>
+        <header className="text-white p-9 transition bg-black">
+          <h1 className="font-bold">{Metadata.title}</h1>
+          <p>{Metadata.description}</p>
         </header>
         <main className="flex justify-around py-14">
           <article className="max-w-2xl prose prose-xl">{children}</article>

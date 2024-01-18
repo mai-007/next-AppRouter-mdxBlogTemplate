@@ -23,6 +23,9 @@ pnpm dev
 bun dev
 ```
 
+build
+npm run build
+
 ## 出来ること
 - MDXでのページ作成(JSX/カスタムComponent利用可)
   @next/mdx @mdx-js/loader @mdx-js/react @types/mdx

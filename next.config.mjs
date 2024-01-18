@@ -8,7 +8,7 @@ import rehypePrism from "@mapbox/rehype-prism";
 import rehypeSlug from "rehype-slug";
 import remarkToc from "remark-toc";
 import remarkBreaks from "remark-breaks";
-import remarkGemoji from 'remark-gemoji'
+import remarkGemoji from 'remark-gemoji';
 
 const withMDX = nextMDX({
   extensions: /\.mdx?$/,

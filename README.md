@@ -4,6 +4,12 @@ Next.jsにてAppRouterを使用しMDXでページ作成出来るtemplateです�
 ## styling
   TailwindCSS
 
+## animation
+[Tail-animista](https://tail-animista.vercel.app/play/basic/scale-up/scale-up-center "Tail-animista")
+1. 上記サイトで生成
+2. tailwind.config.tsに生成させたコードを記載
+3. アニメーション名に'animate-'を付けてclassNameに追加
+
 ## QuickStart
 First, run the development server:
 
